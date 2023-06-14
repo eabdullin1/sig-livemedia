@@ -770,6 +770,7 @@ mesa-libglapi
 mesa-libGLU
 microcode_ctl
 mobile-broadband-provider-info
+ModemManager
 ModemManager-glib
 mokutil
 mozjs60

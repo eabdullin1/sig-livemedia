@@ -609,6 +609,7 @@ mesa-libGL
 mesa-libglapi
 microcode_ctl
 mobile-broadband-provider-info
+ModemManager
 ModemManager-glib
 mokutil
 mousepad
