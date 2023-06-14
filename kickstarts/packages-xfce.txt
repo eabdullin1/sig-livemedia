@@ -879,6 +879,8 @@ xcb-util-renderutil
 xcb-util-wm
 xdg-desktop-portal
 xdg-desktop-portal-gtk
+xdg-user-dirs-gtk
+xdg-utils
 xfce4-about
 xfce4-appfinder
 xfce4-panel
