@@ -304,6 +304,10 @@ google-noto-sans-tagalog-fonts
 google-noto-sans-tai-tham-fonts
 google-noto-sans-tai-viet-fonts
 google-noto-serif-cjk-ttc-fonts
+google-noto-sans-khmer-fonts
+google-noto-sans-myanmar-fonts
+google-noto-sans-oriya-fonts
+google-noto-sans-tibetan-fonts
 lohit-assamese-fonts
 lohit-bengali-fonts
 lohit-devanagari-fonts
