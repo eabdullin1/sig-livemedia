@@ -13,6 +13,7 @@ shutdown
 timezone US/Eastern
 # Network information
 network  --bootproto=dhcp --device=link --activate
+url --url=https://repo.almalinux.org/almalinux/9/BaseOS/$basearch/os/
 repo --name="baseos" --baseurl=https://rsync.repo.almalinux.org/almalinux/9/BaseOS/$basearch/os/
 repo --name="appstream" --baseurl=https://rsync.repo.almalinux.org/almalinux/9/AppStream/$basearch/os/
 repo --name="crb" --baseurl=https://rsync.repo.almalinux.org/almalinux/9/CRB/$basearch/os/
@@ -948,6 +949,7 @@ mesa-libxatracker
 mesa-vulkan-drivers
 microcode_ctl
 mobile-broadband-provider-info
+ModemManager
 ModemManager-glib
 mokutil
 mozilla-filesystem

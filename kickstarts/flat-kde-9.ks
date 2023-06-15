@@ -13,6 +13,7 @@ shutdown
 timezone US/Eastern
 # Network information
 network  --bootproto=dhcp --device=link --activate
+url --url=https://repo.almalinux.org/almalinux/9/BaseOS/$basearch/os/
 repo --name="baseos" --baseurl=https://rsync.repo.almalinux.org/almalinux/9/BaseOS/$basearch/os/
 repo --name="appstream" --baseurl=https://rsync.repo.almalinux.org/almalinux/9/AppStream/$basearch/os/
 repo --name="extras" --baseurl=https://rsync.repo.almalinux.org/almalinux/9/extras/$basearch/os/
@@ -512,6 +513,7 @@ kernel
 kernel-modules
 kernel-modules-extra
 memtest86+
+ModemManager
 nano
 rsync
 shim-x64
