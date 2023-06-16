@@ -13,7 +13,7 @@ lang en_US.UTF-8
 firewall --enabled --service=mdns
 
 # Repos
-repo --name="baseos" --baseurl=https://repo.almalinux.org/almalinux/9/BaseOS/$basearch/os/
+url --url=https://repo.almalinux.org/almalinux/9/BaseOS/$basearch/os/
 repo --name="appstream" --baseurl=https://repo.almalinux.org/almalinux/9/AppStream/$basearch/os/
 repo --name="crb" --baseurl=https://repo.almalinux.org/almalinux/9/CRB/$basearch/os/
 repo --name="extras" --baseurl=https://repo.almalinux.org/almalinux/9/extras/$basearch/os/

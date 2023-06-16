@@ -15,7 +15,7 @@ timezone US/Eastern
 network  --bootproto=dhcp --device=link --activate
 
 # Repos
-repo --name="baseos" --baseurl=https://rsync.repo.almalinux.org/almalinux/8/BaseOS/$basearch/os/
+url --url=https://rsync.repo.almalinux.org/almalinux/8/BaseOS/$basearch/os/
 repo --name="appstream" --baseurl=https://rsync.repo.almalinux.org/almalinux/8/AppStream/$basearch/os/
 repo --name="extras" --baseurl=https://rsync.repo.almalinux.org/almalinux/8/extras/$basearch/os/
 repo --name="powertools" --baseurl=https://rsync.repo.almalinux.org/almalinux/8/PowerTools/$basearch/os/
