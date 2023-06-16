@@ -1392,6 +1392,11 @@ plasma-breeze
 plasma-breeze-common
 plasma-desktop
 plasma-desktop-doc
+plasma-discover
+plasma-discover-flatpak
+plasma-discover-libs
+plasma-discover-notifier
+plasma-discover-packagekit
 plasma-drkonqi
 plasma-integration
 plasma-milou
