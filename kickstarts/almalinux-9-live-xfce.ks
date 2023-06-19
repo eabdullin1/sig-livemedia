@@ -1322,6 +1322,8 @@ xcb-util-wm
 xdg-dbus-proxy
 xdg-desktop-portal
 xdg-desktop-portal-gtk
+xdg-user-dirs-gtk
+xdg-utils
 xfce-polkit
 xfce4-appfinder
 xfce4-panel
