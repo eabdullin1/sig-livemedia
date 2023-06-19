@@ -404,7 +404,6 @@ stretch-background-across-monitors=true
 SLG_EOF
 
 # Comment line with logo
-sed -i 's|logo=.*|## &|' /usr/share/glib-2.0/schemas/10_slick-greeter-mate.gschema.override
 sed -i 's|#logo=|logo=|' /etc/lightdm/slick-greeter.conf
 
 # Turn off PackageKit-command-not-found while uninstalled
