@@ -403,6 +403,9 @@ stretch-background-across-monitors=true
 
 SLG_EOF
 
+# Comment line with logo
+sed -i 's|logo=.*|## &|' /usr/share/glib-2.0/schemas/10_slick-greeter-mate.gschema.override
+
 # Turn off PackageKit-command-not-found while uninstalled
 if [ -f /etc/PackageKit/CommandNotFound.conf ]; then
   sed -i -e 's/^SoftwareSourceSearch=true/SoftwareSourceSearch=false/' /etc/PackageKit/CommandNotFound.conf
