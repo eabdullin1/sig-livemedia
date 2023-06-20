@@ -36,6 +36,15 @@ clearpart --all --initlabel
 part / --size=10238
 
 %post
+# Uncomment line with logo
+if [ -f /etc/lightdm/slick-greeter.conf ]; then
+  mv /etc/lightdm/slick-greeter.conf  /etc/lightdm/slick-greeter.conf_saved
+fi
+cat > /etc/lightdm/lightdm-gtk-greeter.conf << SLK_EOF
+[Greeter]
+logo=
+
+SLK_EOF
 
 systemctl enable --force lightdm.service
 
@@ -402,17 +411,6 @@ background-color=#729fcf
 stretch-background-across-monitors=true
 
 SLG_EOF
-
-# Uncomment line with logo
-if [ -f /etc/lightdm/slick-greeter.conf ]; then
-  mv /etc/lightdm/slick-greeter.conf  /etc/lightdm/slick-greeter.conf_saved
-fi
-cat > /etc/lightdm/lightdm-gtk-greeter.conf << SLK_EOF
-[Greeter]
-logo=
-
-SLK_EOF
-
 
 # Turn off PackageKit-command-not-found while uninstalled
 if [ -f /etc/PackageKit/CommandNotFound.conf ]; then
