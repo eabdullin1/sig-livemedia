@@ -404,7 +404,7 @@ stretch-background-across-monitors=true
 SLG_EOF
 
 # Uncomment line with logo
-sudo sed -i 's|#logo=|logo=|' etc/lightdm/slick-greeter.conf
+sudo sed -i 's|#logo=|logo=|' /etc/lightdm/slick-greeter.conf
 
 # Turn off PackageKit-command-not-found while uninstalled
 if [ -f /etc/PackageKit/CommandNotFound.conf ]; then
