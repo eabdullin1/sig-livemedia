@@ -39,7 +39,7 @@ part / --size=10238
 if [ -f /etc/lightdm/slick-greeter.conf ]; then
   mv /etc/lightdm/slick-greeter.conf  /etc/lightdm/slick-greeter.conf_saved
 fi
-cat > /etc/lightdm/lightdm-gtk-greeter.conf << SLK_EOF
+cat > /etc/lightdm/slick-greeter.conf << SLK_EOF
 [Greeter]
 logo=
 SLK_EOF
@@ -314,10 +314,11 @@ touch /etc/machine-id
 if [ -f /etc/lightdm/slick-greeter.conf ]; then
   mv /etc/lightdm/slick-greeter.conf  /etc/lightdm/slick-greeter.conf_saved
 fi
-cat > /etc/lightdm/lightdm-gtk-greeter.conf << SLK_EOF
+cat > /etc/lightdm/slick-greeter.conf << SLK_EOF
 [Greeter]
 logo=
 SLK_EOF
+
 cat >> /etc/rc.d/init.d/livesys << EOF
 
 # disable gnome-software automatically downloading updates
