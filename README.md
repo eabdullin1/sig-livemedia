@@ -73,11 +73,11 @@ rm -f $PWD/kickstarts/repos.txt
 ln -s $PWD/kickstarts/repos-8.txt $PWD/kickstarts/repos.txt
 ksflatten --config $PWD/kickstarts/almalinux-8-live-kde.ks --output flat-kde.ks
 sudo livecd-creator --config flat-kde.ks \
-               --fslabel AlmaLinux-8-LiveDVD-KDE \
-               --title=AlmaLinux-8-LiveDVD \
-               --product="AlmaLinux Live 8.7" \
+               --fslabel AlmaLinux-8_8-x86_64-Live-KDE \
+               --title="AlmaLinux Live" \
+               --product="AlmaLinux Live" \
                --cache=$PWD/pkg-cache-alma \
-               --releasever=8.7
+               --releasever=8.8
 ```
 
 Run following commands to build XFCE live media.
@@ -87,11 +87,11 @@ rm -f $PWD/kickstarts/repos.txt
 ln -s $PWD/kickstarts/repos-8.txt $PWD/kickstarts/repos.txt
 ksflatten --config $PWD/kickstarts/almalinux-8-live-xfce.ks --output flat-xfce.ks
 sudo livecd-creator --config flat-xfce.ks \
-               --fslabel AlmaLinux-8-LiveDVD-XFCE \
-               --title=AlmaLinux-8-LiveDVD \
-               --product="AlmaLinux Live 8.7" \
+               --fslabel AlmaLinux-8_8-x86_64-Live-XFCE \
+               --title="AlmaLinux Live" \
+               --product="AlmaLinux Live" \
                --cache=$PWD/pkg-cache-alma \
-               --releasever=8.7
+               --releasever=8.8
 ```
 
 
@@ -108,13 +108,14 @@ ksflatten --config $PWD/kickstarts/almalinux-8-live-gnome.ks --output flat-gnome
 sed -i 's/repo --name="baseos" --base/url --/' $PWD/flat-gnome.ks &>/dev/null
 sudo livemedia-creator \
     --ks=flat-gnome.ks \
-    --no-virt --resultdir  ./iso-gnome \
+    --no-virt \
+    --resultdir  ./iso-gnome \
     --project "AlmaLinux Live" \
     --make-iso \
     --iso-only \
-    --iso-name almalinux-8-live-gnome.iso \
-    --releasever 8.7 \
-    --volid "AlmaLinuxLive" \
+    --iso-name AlmaLinux-8.8-x86_64-Live-GNOME.iso \
+    --releasever 8.8 \
+    --volid "AlmaLinux-8_8-x86_64-Live-GNOME" \
     --nomacboot
 ```
 
@@ -129,13 +130,14 @@ ksflatten --config $PWD/kickstarts/almalinux-8-live-gnome.ks --output flat-mini.
 sed -i 's/repo --name="baseos" --base/url --/' $PWD/flat-mini.ks &>/dev/null
 sudo livemedia-creator \
     --ks=flat-mini.ks \
-    --no-virt --resultdir  ./iso-mini \
+    --no-virt \
+    --resultdir=$PWD/pkg-cache-alma \
     --project "AlmaLinux Live" \
     --make-iso \
     --iso-only \
-    --iso-name almalinux-8-live-mini.iso \
-    --releasever 8.7 \
-    --volid "AlmaLinuxLive" \
+    --iso-name AlmaLinux-8.8-x86_64-Live-GNOME-Mini.iso \
+    --releasever 8.8 \
+    --volid "AlmaLinux-8_8-x86_64-Live-Mini" \
     --nomacboot
 ```
 
@@ -148,13 +150,14 @@ ksflatten --config $PWD/kickstarts/almalinux-8-live-kde.ks --output flat-kde.ks
 sed -i 's/repo --name="baseos" --base/url --/' $PWD/flat-kde.ks &>/dev/null
 sudo livemedia-creator \
     --ks=flat-kde.ks \
-    --no-virt --resultdir  ./iso-kde \
+    --no-virt \
+    --resultdir  ./iso-kde \
     --project "AlmaLinux Live" \
     --make-iso \
     --iso-only \
-    --iso-name almalinux-8-live-kde.iso \
-    --releasever 8.7 \
-    --volid "AlmaLinux Live" \
+    --iso-name AlmaLinux-8.8-x86_64-Live-KDE.iso \
+    --releasever 8.8 \
+    --volid "AlmaLinux-8_8-x86_64-Live-KDE" \
     --nomacboot
 ```
 
@@ -167,13 +170,14 @@ ksflatten --config $PWD/kickstarts/almalinux-8-live-xfce.ks --output flat-xfce.k
 sed -i 's/repo --name="baseos" --base/url --/' $PWD/flat-xfce.ks &>/dev/null
 sudo livemedia-creator \
     --ks=flat-xfce.ks \
-    --no-virt --resultdir  ./iso-xfce \
+    --no-virt \
+    --resultdir  ./iso-xfce \
     --project "AlmaLinux Live" \
     --make-iso \
     --iso-only \
-    --iso-name almalinux-8-live-xfce.iso \
-    --releasever 8.7 \
-    --volid "AlmaLinux Live" \
+    --iso-name AlmaLinux-8.8-x86_64-Live-XFCE.iso \
+    --releasever 8.8 \
+    --volid "AlmaLinux-8_8-x86_64-Live-XFCE" \
     --nomacboot
 ```
 
@@ -188,13 +192,14 @@ ksflatten --config $PWD/kickstarts/almalinux-8-live-gnome.ks --output flat-mini.
 sed -i 's/repo --name="baseos" --base/url --/' $PWD/flat-mini.ks &>/dev/null
 sudo livemedia-creator \
     --ks=flat-mini.ks \
-    --no-virt --resultdir  ./iso-mini9 \
+    --no-virt \
+    --resultdir  ./iso-mini9 \
     --project "AlmaLinux Live" \
     --make-iso \
     --iso-only \
-    --iso-name almalinux-9-live-mini.iso \
-    --releasever 9.0 \
-    --volid "AlmaLinuxLive" \
+    --iso-name AlmaLinux-9.2-x86_64-Live-GNOME-Mini.iso \
+    --releasever 9.2 \
+    --volid "AlmaLinux-9_2-x86_64-Live-Mini" \
     --nomacboot
 ```
 
@@ -209,13 +214,14 @@ ksflatten --config $PWD/kickstarts/almalinux-8-live-gnome.ks --output flat-gnome
 sed -i 's/repo --name="baseos" --base/url --/' $PWD/flat-gnome.ks &>/dev/null
 sudo livemedia-creator \
     --ks=flat-gnome.ks \
-    --no-virt --resultdir  ./iso-gnome9 \
+    --no-virt \
+    --resultdir  ./iso-gnome9 \
     --project "AlmaLinux Live" \
     --make-iso \
     --iso-only \
-    --iso-name almalinux-9-live-gnome.iso \
-    --releasever 9.0 \
-    --volid "AlmaLinuxLive" \
+    --iso-name AlmaLinux-9.2-x86_64-Live-GNOME.iso \
+    --releasever 9.2 \
+    --volid "AlmaLinux-9_2-x86_64-Live-GNOME" \
     --nomacboot
 ```
 
