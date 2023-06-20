@@ -447,12 +447,9 @@ almalinux-repos
 alsa-lib
 alternatives
 anaconda
-anaconda-core
-anaconda-gui
+anaconda-install-env-deps
 anaconda-live
-anaconda-tui
-anaconda-user-help
-anaconda-widgets
+@anaconda-tools
 appstream
 appstream-data
 at-spi2-atk
