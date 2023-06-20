@@ -35,17 +35,15 @@ clearpart --all --initlabel
 # Disk partitioning information
 part / --size=10238
 
-%post --nochroot
-if [ -f $INSTALL_ROOT/etc/lightdm/slick-greeter.conf ]; then
-  mv $INSTALL_ROOT/etc/lightdm/slick-greeter.conf  $INSTALL_ROOT/etc/lightdm/slick-greeter.conf_saved
+%post
+if [ -f /etc/lightdm/slick-greeter.conf ]; then
+  mv /etc/lightdm/slick-greeter.conf  /etc/lightdm/slick-greeter.conf_saved
 fi
-cat > $INSTALL_ROOT/etc/lightdm/lightdm-gtk-greeter.conf << SLK_EOF
+cat > /etc/lightdm/lightdm-gtk-greeter.conf << SLK_EOF
 [Greeter]
 logo=
 SLK_EOF
-%end
 
-%post
 systemctl enable --force lightdm.service
 
 # FIXME: it'd be better to get this installed from a package
@@ -313,7 +311,13 @@ touch /etc/machine-id
 %end
 
 %post
-
+if [ -f /etc/lightdm/slick-greeter.conf ]; then
+  mv /etc/lightdm/slick-greeter.conf  /etc/lightdm/slick-greeter.conf_saved
+fi
+cat > /etc/lightdm/lightdm-gtk-greeter.conf << SLK_EOF
+[Greeter]
+logo=
+SLK_EOF
 cat >> /etc/rc.d/init.d/livesys << EOF
 
 # disable gnome-software automatically downloading updates
